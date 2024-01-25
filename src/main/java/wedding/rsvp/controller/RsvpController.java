@@ -28,6 +28,7 @@ public class RsvpController {
 	@Autowired
 	private RsvpService rsvpService;
 
+	
 	// Invitee Table
 
 	@PostMapping("/invitee")
@@ -64,8 +65,10 @@ public class RsvpController {
 		return Map.of("message", "invitee " + inviteeId + " was deleted successfully.");
 	}
 
+	
 	// Guest Table
 
+	
 	@PostMapping("invitee/{inviteeId}/guest")
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public GuestData createGuest(@PathVariable Long inviteeId, @RequestBody GuestData guestData) {

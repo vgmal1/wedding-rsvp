@@ -36,7 +36,6 @@ public class RsvpService {
 		Invitee dbInvitee = inviteeDao.save(invitee);
 
 		return new InviteeData(dbInvitee);
-
 	}
 
 	@Transactional(readOnly = true)
